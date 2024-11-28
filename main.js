@@ -2,7 +2,7 @@ import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "@google/ge
 import MarkdownIt from "markdown-it";
 
 // 🔥 API Key (Ganti dengan kunci API Anda di lingkungan aman)
-const API_KEY = "[GEMINI_API_KEY]";
+const API_KEY = 'AIzaSyD1wAvTaiUNcLX3YTQhuTdCtPQL5EvxYPY';
 
 // Elemen yang digunakan dalam formulir
 const form = document.querySelector("#student-form");
@@ -41,7 +41,7 @@ form.onsubmit = async (event) => {
     // Panggil API Gemini
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-pro",
+      model: "gemini-1.5-flash",
       safetySettings: [
         {
           category: HarmCategory.HARM_CATEGORY_HARASSMENT,
